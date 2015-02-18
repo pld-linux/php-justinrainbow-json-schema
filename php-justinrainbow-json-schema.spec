@@ -1,19 +1,23 @@
 %define		pkgname	json-schema
-%define		php_min_version 5.0.0
+%define		php_min_version 5.3.0
 %include	/usr/lib/rpm/macros.php
 Summary:	PHP implementation of JSON schema
 Name:		php-justinrainbow-%{pkgname}
-Version:	1.1.0
+Version:	1.3.7
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
-Source0:	https://github.com/justinrainbow/json-schema/archive/v%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	8a0d463f7bc9f8cb5b1d8debcccffc0e
+Source0:	https://github.com/justinrainbow/json-schema/archive/%{version}/%{pkgname}-%{version}.tar.gz
+# Source0-md5:	fec5597d02cc64ea7e01e20f40910ecf
 URL:		https://github.com/justinrainbow/json-schema
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.461
 Requires:	php(core) >= %{php_min_version}
+Requires:	php(filter)
+Requires:	php(json)
+Requires:	php(mbstring)
 Requires:	php(pcre)
+Requires:	php(spl)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,6 +26,8 @@ JSON Schema for PHP.
 
 A PHP Implementation for validating JSON Structures against a given
 Schema.
+
+Fork of the <http://jsonschemaphpv.sourceforge.net> project.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
