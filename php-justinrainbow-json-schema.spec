@@ -1,14 +1,14 @@
 %define		pkgname	json-schema
-%define		php_min_version 5.3.0
+%define		php_min_version 5.3.2
 %include	/usr/lib/rpm/macros.php
 Summary:	PHP implementation of JSON schema
 Name:		php-justinrainbow-%{pkgname}
-Version:	1.3.7
+Version:	1.4.4
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	https://github.com/justinrainbow/json-schema/archive/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	fec5597d02cc64ea7e01e20f40910ecf
+# Source0-md5:	88be53248305a4a34eb81ad534759d68
 URL:		https://github.com/justinrainbow/json-schema
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.461
