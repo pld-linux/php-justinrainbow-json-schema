@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	PHP implementation of JSON schema
 Name:		php-justinrainbow-%{pkgname}
-Version:	5.2.7
+Version:	5.2.8
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/justinrainbow/json-schema/archive/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	60ed0092e52ad4a0cd0108caf112021b
+# Source0-md5:	76ada0e00ca8e7ef07404bacaac1983a
 URL:		https://github.com/justinrainbow/json-schema
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.461
